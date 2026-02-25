@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Motoko actor defining CreditCard, APRRange, and RewardsRate types with comparison helpers, a Map-based data store, and an initialize function that seeds sample credit card data.",
+  "feature_evidence.json": "Feature evidence report mapping three product features (card listing page, comparison feature, visual theme) to their implementing source files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON document providing one-line summaries of each frontend source file, serving as a quick reference for the purpose of every component, hook, page, and config file.",
+  "frontend/index.css": "Tailwind base stylesheet defining OKLCH-based CSS custom properties for light and dark color themes including background, foreground, card, chart, and sidebar tokens.",
+  "frontend/index.html": "Minimal HTML entry point titled 'Credit Card Comparison' that mounts the React app into a root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component managing view state between the card listing and comparison pages, passing selected cards and navigation callbacks to child pages.",
+  "frontend/src/components/CardTile.tsx": "Credit card tile component rendering issuer, name, annual fee, APR, rewards, signup bonus, categories, and credit score with a teal gradient header and a compare toggle button.",
+  "frontend/src/components/ComparisonBar.tsx": "Sticky bottom bar that appears when at least one card is selected, displaying selected card chips with remove buttons, empty slot indicators, and a 'Compare Now' CTA.",
+  "frontend/src/components/FilterBar.tsx": "A filter and sort toolbar component that renders category pill buttons and a sort dropdown, displaying filtered vs. total card counts.",
+  "frontend/src/components/Layout.tsx": "App shell component providing a sticky header, hero banner, main content slot, and footer with branding and attribution.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an ICP backend actor (anonymous or authenticated) using React Query, invalidating dependent queries when the identity changes.",
+  "frontend/src/hooks/useCardComparison.ts": "Custom hook managing a set of up to 3 selected credit card IDs for side-by-side comparison, exposing toggle, remove, and clear actions.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an Internet Identity authentication context and provider, wrapping DFINITY's AuthClient to expose login, logout, and identity state.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for fetching all cards, cards by category, sorted cards, all categories, and an initialize mutation against the ICP backend actor.",
+  "frontend/src/index.css": "Global stylesheet importing Inter and Sora fonts, defining Tailwind CSS layers with light/dark OKLCH design tokens, and custom utility classes for gradients and card hover effects.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app wrapped in QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/CardListingPage.tsx": "Main listing page that displays credit cards in a responsive grid with filtering by category and sorting options, auto-initializes data if empty, and supports card selection for comparison via a sticky comparison bar.",
+  "frontend/src/pages/ComparisonPage.tsx": "Side-by-side comparison page that renders a scrollable table of selected credit card attributes (fee, rewards, APR, etc.) with options to remove individual cards or navigate back to the listing.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom fonts (Inter, Sora), OKLCH-based color palettes (teal, gold, and semantic tokens), dark mode support, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state manifest tracking version, existing implemented features, pending feature requests, image requirements, and architectural notes for the Credit Card Comparison app."
+}

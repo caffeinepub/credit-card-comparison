@@ -1,0 +1,71 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-credit-card-listing-page-that-displays-all-available-cards-in-a-responsive-card-grid-each-card-tile-should-show-the-card-name-issuer-annual-fee-rewards-rate-signup-bonus-and-a-compare-toggle-button-include-filtering-by-category-cashback-travel-balance-transfer-rewards-and-sorting-options-annual-fee-apr-rewards-rate",
+      "featureTitle": "Build a credit card listing page that displays all available cards in a responsive card grid. Each card tile should show the card name, issuer, annual fee, rewards rate, signup bonus, and a 'Compare' toggle button. Include filtering by category (cashback, travel, balance transfer, rewards) and sorting options (annual fee, APR, rewards rate).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CardTile.tsx",
+        "frontend/src/components/FilterBar.tsx",
+        "frontend/src/pages/CardListingPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-credit-card-comparison-feature-users-can-select-up-to-3-cards-via-a-compare-toggle-on-each-card-tile-a-sticky-comparison-bar-appears-at-the-bottom-when-at-least-2-cards-are-selected-showing-selected-card-names-and-a-compare-now-button-clicking-compare-now-opens-a-full-comparison-view-with-a-side-by-side-table-of-all-card-attributes",
+      "featureTitle": "Implement a credit card comparison feature: users can select up to 3 cards via a 'Compare' toggle on each card tile. A sticky comparison bar appears at the bottom when at least 2 cards are selected, showing selected card names and a 'Compare Now' button. Clicking 'Compare Now' opens a full comparison view with a side-by-side table of all card attributes.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ComparisonBar.tsx",
+        "frontend/src/hooks/useCardComparison.ts",
+        "frontend/src/pages/ComparisonPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-clean-modern-visual-theme-using-a-neutral-white-light-gray-background-crisp-card-shadows-and-accents-in-deep-teal-and-warm-gold-use-a-sans-serif-typeface-hierarchy-with-bold-headings-and-readable-body-text-card-tiles-should-have-smooth-hover-animations-and-the-layout-should-feel-airy-with-generous-whitespace-apply-the-theme-consistently-across-all-pages-and-components",
+      "featureTitle": "Apply a clean, modern visual theme using a neutral white/light-gray background, crisp card shadows, and accents in deep teal and warm gold. Use a sans-serif typeface hierarchy with bold headings and readable body text. Card tiles should have smooth hover animations, and the layout should feel airy with generous whitespace. Apply the theme consistently across all pages and components.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

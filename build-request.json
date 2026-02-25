@@ -1,0 +1,104 @@
+{
+  "kind": "build_request",
+  "title": "Credit Card List & Comparison Page",
+  "projectName": "CardCompare",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend data store for credit cards with fields: name, issuer, annualFee, APR (min/max), rewardsRate, signupBonus, categories (e.g. cashback, travel, balance transfer), creditScoreRequired, and a short description. Pre-populate with at least 8 realistic sample credit cards.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "credit card list page for infor and comparison"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores at least 8 credit card entries with all specified fields.",
+        "A query function exists to retrieve all credit cards.",
+        "A query function exists to retrieve cards by category filter."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a credit card listing page that displays all available cards in a responsive card grid. Each card tile should show the card name, issuer, annual fee, rewards rate, signup bonus, and a 'Compare' toggle button. Include filtering by category (cashback, travel, balance transfer, rewards) and sorting options (annual fee, APR, rewards rate).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "credit card list page for infor"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All cards are displayed in a grid layout on the listing page.",
+        "Each card tile shows name, issuer, annual fee, rewards rate, and signup bonus.",
+        "Filter buttons allow narrowing the list by category.",
+        "Sorting controls reorder the list by annual fee, APR, or rewards rate.",
+        "Page is responsive on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a credit card comparison feature: users can select up to 3 cards via a 'Compare' toggle on each card tile. A sticky comparison bar appears at the bottom when at least 2 cards are selected, showing selected card names and a 'Compare Now' button. Clicking 'Compare Now' opens a full comparison view with a side-by-side table of all card attributes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "comparison"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can select up to 3 cards for comparison.",
+        "A sticky bottom bar appears when 2 or more cards are selected.",
+        "Clicking 'Compare Now' renders a side-by-side comparison table.",
+        "Comparison table rows include: annual fee, APR range, rewards rate, signup bonus, categories, and credit score required.",
+        "Users can remove a card from the comparison and return to the list."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a clean, modern visual theme using a neutral white/light-gray background, crisp card shadows, and accents in deep teal and warm gold. Use a sans-serif typeface hierarchy with bold headings and readable body text. Card tiles should have smooth hover animations, and the layout should feel airy with generous whitespace. Apply the theme consistently across all pages and components.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "clean and modern ui"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color palette uses white/light-gray backgrounds with deep teal and warm gold accents.",
+        "Typography uses a sans-serif font with clear heading and body hierarchy.",
+        "Card tiles have drop shadows and subtle hover animations.",
+        "Consistent spacing and whitespace throughout the UI.",
+        "No visual inconsistencies between the listing and comparison views."
+      ]
+    }
+  ],
+  "constraints": [
+    "All credit card data must be stored and served from the Motoko backend, not hardcoded in the frontend.",
+    "Do not use any external credit card APIs or third-party data sources.",
+    "Comparison selection is frontend state only — no need to persist it in the backend."
+  ],
+  "nonGoals": [
+    "User authentication or personalized card recommendations.",
+    "Applying for a credit card (no external links or application flows).",
+    "Real-time data or live APR fetching.",
+    "User reviews or ratings of credit cards."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract hero banner with subtle geometric shapes in deep teal and warm gold gradients on a light background (hero-banner.dim_1200x300.png)",
+      "Generic stylized credit card illustration with a clean gradient face in teal and gold tones (card-placeholder.dim_400x250.png)"
+    ],
+    "edits": []
+  }
+}

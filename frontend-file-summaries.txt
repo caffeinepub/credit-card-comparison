@@ -1,0 +1,13 @@
+{
+  "frontend/src/index.css": "Global styles with OKLCH color system using deep teal primary and warm gold accent tokens, custom font imports (Inter + Sora), and utility classes for gradients and card hover animations.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom teal/gold color palettes, Inter/Sora font families, enhanced border radius, card shadow utilities, and slide-up/fade-in animations.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations: getAllCards, getCardsByCategory, getSortedCards, getAllCategories, and initialize mutation with cache invalidation.",
+  "frontend/src/hooks/useCardComparison.ts": "Custom hook managing comparison selection state with max-3 limit, toggle/remove/clear operations, and helper predicates.",
+  "frontend/src/components/Layout.tsx": "Full-page layout wrapper with sticky header, hero banner with teal gradient overlay, main content slot, and branded footer with caffeine.ai attribution.",
+  "frontend/src/components/CardTile.tsx": "Credit card tile component displaying issuer, name, annual fee, APR, rewards, signup bonus, categories, and credit score with a teal gradient header and compare toggle button.",
+  "frontend/src/components/FilterBar.tsx": "Filter and sort control bar with category pill buttons fetched from backend and a sort dropdown for annual fee, APR, and rewards rate ordering.",
+  "frontend/src/components/ComparisonBar.tsx": "Sticky bottom comparison bar that appears when cards are selected, showing selected card chips, empty slots, and a \"Compare Now\" CTA button.",
+  "frontend/src/pages/CardListingPage.tsx": "Main listing page orchestrating card fetching, filtering, sorting, comparison state, auto-initialization, loading skeletons, and empty states in a responsive grid.",
+  "frontend/src/pages/ComparisonPage.tsx": "Side-by-side comparison table page showing annual fee, APR, rewards, signup bonus, categories, credit score, and description for up to 3 selected cards.",
+  "frontend/src/App.tsx": "Root app component managing view state (listing vs comparison) and passing selected cards between the listing and comparison pages without a router."
+}

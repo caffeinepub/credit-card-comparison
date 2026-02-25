@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "A credit card listing and comparison page with a clean and modern UI.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract hero banner with subtle geometric shapes in deep teal and warm gold gradients on a light background (hero-banner.dim_1200x300.png)\n- Generic stylized credit card illustration with a clean gradient face in teal and gold tones (card-placeholder.dim_400x250.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-credit-card-listing-page-that-displays-all-available-cards-in-a-responsive-card-grid-each-card-tile-should-show-the-card-name-issuer-annual-fee-rewards-rate-signup-bonus-and-a-compare-toggle-button-include-filtering-by-category-cashback-travel-balance-transfer-rewards-and-sorting-options-annual-fee-apr-rewards-rate",
+      "title": "Build a credit card listing page that displays all available cards in a responsive card grid. Each card tile should show the card name, issuer, annual fee, rewards rate, signup bonus, and a 'Compare' toggle button. Include filtering by category (cashback, travel, balance transfer, rewards) and sorting options (annual fee, APR, rewards rate).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-credit-card-comparison-feature-users-can-select-up-to-3-cards-via-a-compare-toggle-on-each-card-tile-a-sticky-comparison-bar-appears-at-the-bottom-when-at-least-2-cards-are-selected-showing-selected-card-names-and-a-compare-now-button-clicking-compare-now-opens-a-full-comparison-view-with-a-side-by-side-table-of-all-card-attributes",
+      "title": "Implement a credit card comparison feature: users can select up to 3 cards via a 'Compare' toggle on each card tile. A sticky comparison bar appears at the bottom when at least 2 cards are selected, showing selected card names and a 'Compare Now' button. Clicking 'Compare Now' opens a full comparison view with a side-by-side table of all card attributes.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-clean-modern-visual-theme-using-a-neutral-white-light-gray-background-crisp-card-shadows-and-accents-in-deep-teal-and-warm-gold-use-a-sans-serif-typeface-hierarchy-with-bold-headings-and-readable-body-text-card-tiles-should-have-smooth-hover-animations-and-the-layout-should-feel-airy-with-generous-whitespace-apply-the-theme-consistently-across-all-pages-and-components",
+      "title": "Apply a clean, modern visual theme using a neutral white/light-gray background, crisp card shadows, and accents in deep teal and warm gold. Use a sans-serif typeface hierarchy with bold headings and readable body text. Card tiles should have smooth hover animations, and the layout should feel airy with generous whitespace. Apply the theme consistently across all pages and components.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Credit card list page displaying card information",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Credit card comparison feature",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Clean and modern UI design",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create a backend data store for credit cards with fields: name, issuer, annualFee, APR (min/max), rewardsRate, signupBonus, categories (e.g. cashback, travel, balance transfer), creditScoreRequired, and a short description. Pre-populate with at least 8 realistic sample credit cards.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Credit Card Comparison",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

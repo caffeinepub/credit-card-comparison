@@ -1,0 +1,106 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Credit Card List & Comparison Page",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Build a credit card listing page with filtering and sorting",
+      "acceptanceCriteria": [
+        "All cards are displayed in a grid layout on the listing page.",
+        "Each card tile shows name, issuer, annual fee, rewards rate, and signup bonus.",
+        "Filter buttons allow narrowing the list by category.",
+        "Sorting controls reorder the list by annual fee, APR, or rewards rate.",
+        "Page is responsive on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CardListingPage.tsx",
+          "operation": "create",
+          "description": "Create the main credit card listing page component. Fetch all cards from the backend using getAllCards(). Implement state management for filtering by category and sorting by annual fee, APR, or rewards rate. Display cards in a responsive grid layout with filter controls and sorting dropdown. Pass selected cards state to child components for comparison feature integration."
+        },
+        {
+          "path": "frontend/src/components/CardTile.tsx",
+          "operation": "create",
+          "description": "Create a reusable card tile component that displays a single credit card's information including name, issuer, annual fee, rewards rate, and signup bonus. Include a 'Compare' toggle button that updates parent state. Apply hover animations and visual styling per theme requirements. Accept card data and comparison toggle handler as props."
+        },
+        {
+          "path": "frontend/src/components/FilterBar.tsx",
+          "operation": "create",
+          "description": "Create a filtering and sorting control bar component. Include category filter buttons (cashback, travel, balance transfer, rewards) and a sorting dropdown (annual fee, APR, rewards rate). Fetch available categories from getAllCategories() backend method. Emit filter and sort change events to parent component."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for the credit card listing page at the root path '/'. Import and register CardListingPage component in the router configuration. Ensure the listing page is the default landing view."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement credit card comparison feature with sticky bar and side-by-side view",
+      "acceptanceCriteria": [
+        "Users can select up to 3 cards for comparison.",
+        "A sticky bottom bar appears when 2 or more cards are selected.",
+        "Clicking 'Compare Now' renders a side-by-side comparison table.",
+        "Comparison table rows include: annual fee, APR range, rewards rate, signup bonus, categories, and credit score required.",
+        "Users can remove a card from the comparison and return to the list."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ComparisonBar.tsx",
+          "operation": "create",
+          "description": "Create a sticky bottom comparison bar component that appears when 2 or more cards are selected. Display selected card names and a 'Compare Now' button. Position using fixed bottom styling. Accept selected cards array and navigation handler as props. Implement logic to show/hide based on selection count."
+        },
+        {
+          "path": "frontend/src/pages/ComparisonPage.tsx",
+          "operation": "create",
+          "description": "Create a full comparison view page with a side-by-side table displaying selected cards. Include rows for annual fee, APR range (min/max), rewards rate, signup bonus, categories, and credit score required. Allow users to remove individual cards from comparison. Provide a back button to return to the listing page. Accept selected card IDs via route state or query parameters."
+        },
+        {
+          "path": "frontend/src/hooks/useCardComparison.ts",
+          "operation": "create",
+          "description": "Create a custom React hook to manage comparison state. Track selected card IDs (max 3), provide functions to add/remove/toggle cards, and expose the current selection. Implement validation to prevent selecting more than 3 cards. Return helper functions for checking if a card is selected and getting selected card count."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for the comparison page at '/compare'. Import and register ComparisonPage component in the router configuration. Ensure route accepts selected card data via state or query parameters."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply clean, modern visual theme with deep teal and warm gold accents",
+      "acceptanceCriteria": [
+        "Color palette uses white/light-gray backgrounds with deep teal and warm gold accents.",
+        "Typography uses a sans-serif font with clear heading and body hierarchy.",
+        "Card tiles have drop shadows and subtle hover animations.",
+        "Consistent spacing and whitespace throughout the UI.",
+        "No visual inconsistencies between the listing and comparison views."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define custom CSS variables for the color palette: deep teal (#0D7377 or similar), warm gold (#F4A261 or similar), light gray background (#F8F9FA), and white. Add global typography styles using a sans-serif font stack with clear heading and body hierarchy. Define base spacing and whitespace utilities. Include smooth transition defaults for hover animations. Wire generated hero banner image at frontend/public/assets/generated/hero-banner.dim_1200x300.png for use as a background asset."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind theme with custom colors for deep teal (primary), warm gold (accent), light gray (background), and neutral shades. Configure font family to use a modern sans-serif stack. Add custom spacing scale for consistent whitespace. Define shadow utilities for card drop shadows. Ensure responsive breakpoints are configured for mobile and desktop layouts."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create a layout wrapper component that applies consistent theme styling across all pages. Include a header section with the hero banner image from frontend/public/assets/generated/hero-banner.dim_1200x300.png. Apply global background color and padding. Wrap page content with consistent margins and max-width constraints. Use this layout as a wrapper for CardListingPage and ComparisonPage."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routed pages with the Layout component to ensure consistent theme application across the listing and comparison views."
+        }
+      ]
+    }
+  ]
+}
